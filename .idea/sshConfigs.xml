@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="hyasynth.sakura.ne.jp" id="081e7cf5-0ccd-4aca-b115-47d580a779a2" port="22" nameFormat="DESCRIPTIVE" username="hyasynth" />
+    </configs>
+  </component>
+</project>

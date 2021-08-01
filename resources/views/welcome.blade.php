@@ -1,0 +1,187 @@
+@extends('layouts.app')
+
+@section('title', 'ホーム')
+
+@section('jumbotron')
+    <!-- 動画背景 -->
+    <div class="jumbotron jumbotron-fluid mb-0 wrap" id="header">
+        <!-- 背景用の動画ファイル -->
+        <video id="bg-video" autoplay loop muted poster="images/dojo.jpg">
+            <source src="video/sample.mp4" />
+        </video>
+        <!-- 背景の上に表示させたいコンテンツ -->
+        <div class="container">
+            <h1 class="display-4" data-anijs="if: scroll, on:window, do: bounce animated, before: scrollReveal">
+                CoderDojo古河</h1>
+            <p class="lead" data-anijs="if: scroll, on:window, do: bounce animated, before: scrollReveal">子どものためのプログラミング道場</p>
+            <!--<a class="btn btn-secondary btn-lg" href="https://laraweb.net/" target="_blank" role="button" data-anijs="if: scroll, on:window, do: fadeInUp animated, before: scrollReveal">もっと学ぼう</a>-->
+        </div>
+    </div><!-- /.jumbotron -->
+@endsection
+
+@section('content')
+    <main>
+        <!-- VISION -->
+        <section id="sec01">
+            <div class="container">
+                <h2 class="mt-3" data-anijs="if: scroll, on:window, do: flipInX animated, before: scrollReveal">CoderDojo古河とは？</h2>
+                <p data-anijs="if: scroll, on:window, do: flipInY animated, before: scrollReveal">
+                    茨城県古河市を中心に、毎月開催を目指している 参加費無料の子どもたち向けのプログラミングクラブです。
+                </p>
+            </div><!-- /.container -->
+        </section>
+        <!-- // VISION -->
+
+        <!-- MESSAGE -->
+        <section id="sec02">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-md-6 col-sm-12" data-anijs="if: scroll, on:window, do: fadeInLeft animated, before: scrollReveal">
+                        <img class="img-fluid" src="images/sec02_01.jpg">
+                    </div>
+                    <div class="col-md-6 col-sm-12 p-5" data-anijs="if: scroll, on:window, do: fadeInRight animated, before: scrollReveal">
+                        <h2>プログラミングを自ら楽しむ</h2>
+                        <p>
+                            いわゆるパソコン教室や塾ではありません。<br>
+                            参加してくれた子供たちが、自らプログラミングを
+                            楽しんでくれる。そんなコミュニティを目指しています。<br>
+                            先生や講師はいませんが、
+                            メンターと呼ばれる人たちが一緒に悩んでくれるかもですw<br>
+                            プログラミングで楽しむことを、子どもたち自身で
+                            見つけてもらえると、うれしいです。
+                        </p>
+                    </div>
+                </div>
+                <div class="row flex-row-reverse">
+                    <div class="col-md-6 col-sm-12" data-anijs="if: scroll, on:window, do: fadeInRight animated, before: scrollReveal">
+                        <img class="img-fluid" src="images/sec02_02.jpg">
+                    </div>
+                    <div class="col-md-6 col-sm-12 p-5" data-anijs="if: scroll, on:window, do: fadeInLeft animated, before: scrollReveal">
+                        <h2>道場は世界中にあります</h2>
+                        <p>
+                            CoderDojo は7〜17歳を対象とした非営利のプログラミング道場です。<br>
+                            2011年にアイルランドで始まり、世界では112カ国・2,200の道場、日本には233以上の道場があります。
+                        </p>
+                    </div>
+                </div>
+            </div><!-- /.container -->
+        </section>
+        <!-- // MESSAGE -->
+
+        <!-- MESSAGE -->
+        <section id="sec03"  data-anijs="if: scroll, on:window, do: fadeInUp animated, before: scrollReveal">
+            <div class="container">
+                <h2>プログラミング</h2>
+                <div class="row">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card mb-4">
+                            <img class="card-img-top" src="images/sec03_01.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">Scratch</h4>
+                                <p class="card-text">
+                                    はじめてのプログラミングは、まずScratchを使ってみると良いでしょう。<br>
+                                    ブロック遊びのように部品を組み立てるだけで、簡単に始めることができます。
+                                </p>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-scratch">
+                                        ＞ くわしく
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card mb-4">
+                            <img class="card-img-top" src="images/sec03_02.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">さわって遊ぼう</h4>
+                                <p class="card-text">
+                                    古河道場の特色として、Micro:bitやmBotなどのハードウェアを用いた体験型プログラミングが盛んです。<br>
+                                    PCの画面を飛び出して、実際にロボットをさわったり動かたりしてみませんか。
+                                </p>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-robot">
+                                        ＞ くわしく
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card mb-4">
+                            <img class="card-img-top" src="images/sec03_03.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">プログラミングは自由だ！</h4>
+                                <p class="card-text">
+                                    Switchや3DS、マイクラのレッドストーン回路などプログラミングの題材は自由。<br>
+                                    お菓子のポッキーでもプログラミング出来るって、知ってました？
+                                </p>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-etc">
+                                        ＞ くわしく
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.container -->
+        </section>
+        <!-- // MESSAGE -->
+
+        <!-- STORY -->
+        <section class="mb-5" id="sec04" data-parallax="scroll" data-image-src="images/dojo.jpg">
+            <div class="container" data-anijs="if: scroll, on:window, do: fadeIn animated, before: scrollReveal">
+                <h2 class="text-white">STORY</h2>
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        寿限無寿限無五劫の擦り切れ海砂利水魚の水行末雲来末風来末食う寝る処に住む処やぶら小路の藪柑子パイポパイポパイポのシューリンガン。
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        シューリンガンのグーリンダイグーリンダイのポンポコピーのポンポコナーの長久命の長助なのです。
+                    </div>
+                </div>
+            </div><!-- /.container -->
+        </section>
+        <!-- // STORY -->
+    </main>
+@endsection
+
+@section('extra-content')
+    <!-- モーダルメニュー -->
+    <div class="modal fade" id="modal-scratch" tabindex="-1" role="dialog" aria-labelledby="modal-scratch-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-scratch-title">Scratch</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/sec03_01.jpg" class="img-fluid" alt="Scratch">
+                    <p>
+                        はじめてプログラミングに触れるお子さまは、まずScratchを使ってみると良いでしょう。<br>
+                        ブロック遊びのように部品を組み立てるだけで、簡単に始めることができます。
+                    </p>
+                    <p>
+                        「Scratch（スクラッチ）」は、MITメディアラボというアメリカのマサチューセッツ工科大学内にある研究所で作られた、子ども向けのプログラミングソフトです。
+                    </p>
+                    <p>
+                        マウス操作で部品を組み合わせてプログラミングする「ビジュアルプログラミング言語」なので、キーボードを使う文字のタイピングに不慣れな子どもやパソコン初心者でも気軽にプログラミング学習に取り組むことができます。
+                    </p>
+                    <p>
+                        また、会員登録やインストールの必要がないので、ネット環境とパソコンやタブレットなどがあれば、誰でも無料で楽しめます。
+                    </p>
+                    <h5>参考リンク</h5>
+                    <div>
+                        <a class="active" target="_blank" href="https://scratch.mit.edu/">Scratch公式サイト</a>
+                    </div>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">とじる</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection

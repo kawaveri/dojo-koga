@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f6b5ddb5-b0ca-407d-ad95-0c1dbe5a24b5" name="hyasynth.com">
+        <fileTransfer rootFolder="/home/hyasynth/www" accessType="SFTP" host="hyasynth.sakura.ne.jp" port="22" sshConfigId="081e7cf5-0ccd-4aca-b115-47d580a779a2" sshConfig="hyasynth@hyasynth.sakura.ne.jp:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
