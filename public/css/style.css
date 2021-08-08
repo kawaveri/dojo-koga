@@ -63,29 +63,48 @@ section p{
 /* MAIN VISUAL
 ------------------------------------------------------------*/
 /* ジャンボトロン */
-.jumbotron {
+/*.jumbotron {*/
+/*    height: 93vh;*/
+/*    text-align: center;*/
+/*    color: #ffffff;*/
+/*    display: flex; !* flexboxを使ってど真ん中に配置 *!*/
+/*    justify-content: center; !* flexboxを使ってど真ん中に配置 *!*/
+/*    align-items: center; !* flexboxを使ってど真ん中に配置 *!*/
+/*}*/
+
+/*!* 背景用の動画ファイル *!*/
+/*#bg-video{*/
+/*    position: absolute;*/
+/*    min-width: 100%;*/
+/*    z-index: -100;*/
+/*}*/
+
+.home_header {
+    background: url(../images/main_bg.jpg) center center / cover no-repeat;
+    width: 100%;
     height: 93vh;
-    text-align: center;
-    color: #ffffff;
-    display: flex; /* flexboxを使ってど真ん中に配置 */
-    justify-content: center; /* flexboxを使ってど真ん中に配置 */
-    align-items: center; /* flexboxを使ってど真ん中に配置 */
 }
 
-/* 背景用の動画ファイル */
-#bg-video{
-    position: absolute;
-    right: 0;
-    top: 0;
-    min-width: 100%;
-    z-index: -100;
+.home_header .home_overlay {
+    display: flex;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 100%;
+    height: 93vh;
+    background: linear-gradient(-45deg, rgba(51, 102, 102, 0.39), rgba(17, 66, 99, 0.6));
+}
+
+.home_header .home_overlay .logo {
+    width: 90%;
+    max-width: 500px;
+    opacity: 0.7;
 }
 
 /* グラデーションオーバーレイ */
 .wrap{
-    width: 100%;
-    height: 93vh;
-    background: linear-gradient(-45deg, rgba(4, 114, 124, 0.4), rgba(17, 66, 99, 0.6));
 }
 
 /* iPadだけ高さ変更 */

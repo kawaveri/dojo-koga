@@ -3,20 +3,16 @@
 @section('title', 'ホーム')
 
 @section('jumbotron')
-    <!-- 動画背景 -->
-    <div class="jumbotron jumbotron-fluid mb-0 wrap" id="header">
-        <!-- 背景用の動画ファイル -->
-        <video id="bg-video" autoplay loop muted poster="images/dojo.jpg">
-            <source src="video/sample.mp4" />
-        </video>
-        <!-- 背景の上に表示させたいコンテンツ -->
-        <div class="container">
-            <h1 class="display-4" data-anijs="if: scroll, on:window, do: bounce animated, before: scrollReveal">
-                CoderDojo古河</h1>
-            <p class="lead" data-anijs="if: scroll, on:window, do: bounce animated, before: scrollReveal">子どものためのプログラミング道場</p>
-            <!--<a class="btn btn-secondary btn-lg" href="https://laraweb.net/" target="_blank" role="button" data-anijs="if: scroll, on:window, do: fadeInUp animated, before: scrollReveal">もっと学ぼう</a>-->
+    <div class="home_header">
+        <div class="home_overlay">
+            <div class="container">
+                <img class="logo" src="images/dojo.svg" alt="CoderDojo古河">
+                <h1 class="display-4" data-anijs="if: scroll, on:window, do: bounce animated, before: scrollReveal"><nobr>CoderDojo<wbr>古河</nobr></h1>
+                <p class="lead" data-anijs="if: scroll, on:window, do: bounce animated, before: scrollReveal"><nobr>子どものための<wbr>プログラミング道場</nobr></p>
+                <!--<a class="btn btn-secondary btn-lg" href="https://laraweb.net/" target="_blank" role="button" data-anijs="if: scroll, on:window, do: fadeInUp animated, before: scrollReveal">もっと学ぼう</a>-->
+            </div>
         </div>
-    </div><!-- /.jumbotron -->
+    </div>
 @endsection
 
 @section('content')
@@ -77,7 +73,7 @@
                         <div class="card mb-4">
                             <img class="card-img-top" src="images/sec03_01.jpg" alt="Card image cap">
                             <div class="card-body">
-                                <h4 class="card-title">Scratch</h4>
+                                <h4 class="card-title">Scratchではじめよう</h4>
                                 <p class="card-text">
                                     はじめてのプログラミングは、まずScratchを使ってみると良いでしょう。<br>
                                     ブロック遊びのように部品を組み立てるだけで、簡単に始めることができます。
@@ -96,8 +92,8 @@
                             <div class="card-body">
                                 <h4 class="card-title">さわって遊ぼう</h4>
                                 <p class="card-text">
-                                    古河道場の特色として、Micro:bitやmBotなどのハードウェアを用いた体験型プログラミングが盛んです。<br>
-                                    PCの画面を飛び出して、実際にロボットをさわったり動かたりしてみませんか。
+                                    古河道場の特色として、Micro:bitやmBotなどを用いた体験型プログラミングに注力しています。<br>
+                                    PCの画面を飛び出して、実際に動かしたりしてみませんか。
                                 </p>
                                 <div class="text-center">
                                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-robot">
@@ -109,7 +105,7 @@
                     </div>
                     <div class="col-md-4 col-sm-12">
                         <div class="card mb-4">
-                            <img class="card-img-top" src="images/sec03_03.png" alt="Card image cap">
+                            <img class="card-img-top" src="images/sec03_03.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h4 class="card-title">プログラミングは自由だ！</h4>
                                 <p class="card-text">
@@ -149,11 +145,12 @@
 
 @section('extra-content')
     <!-- モーダルメニュー -->
+    <!-- Scratch -->
     <div class="modal fade" id="modal-scratch" tabindex="-1" role="dialog" aria-labelledby="modal-scratch-title" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modal-scratch-title">Scratch</h5>
+                    <h5 class="modal-title" id="modal-scratch-title">Scratchではじめよう</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -177,7 +174,85 @@
                     <div>
                         <a class="active" target="_blank" href="https://scratch.mit.edu/">Scratch公式サイト</a>
                     </div>
-                    <div class="text-center">
+                    <div class="text-center mb-4">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">とじる</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Robot -->
+    <div class="modal fade" id="modal-robot" tabindex="-1" role="dialog" aria-labelledby="modal-robot-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-robot-title">さわって遊ぼう</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/sec03_02.jpg" class="img-fluid" alt="robot">
+                    <p>
+                        古河道場の特色として、Micro:bitやmBotなどのハードウェアを用いた体験型プログラミングに注力しています。
+                    </p>
+                    <p>
+                        古河道場では小型マイコンボードの<a href="https://makecode.microbit.org/?lang=ja" target="_blank">Micro:bit</a>やプログラミングロボットの<a href="https://www.makeblock.com/steam-kits/mbot" target="_blank">mBot</a>を複数台有しておりますので希望者には貸与しております。
+                    </p>
+                    <p>
+                        また、2021年7月に<a href="https://www.jaycee.or.jp/" target="_blank">公益社団法人日本青年会議所さま</a>からロボットプログラミングキット5台を寄贈して頂きました。
+                    </p>
+                    <p>
+                        さあ、PCの画面を飛び出して、実際にロボットをさわったり動かしたりしてみませんか。
+                    </p>
+                    <h5>参考リンク</h5>
+                    <div>
+                        <a class="active" href="https://makecode.microbit.org/?lang=ja" target="_blank">Micro:bit公式サイト</a>
+                    </div>
+                    <div>
+                        <a class="active" href="https://www.makeblock.com/steam-kits/mbot" target="_blank">mBot公式サイト</a>
+                    </div>
+                    <div class="text-center mb-4">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">とじる</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ETC -->
+    <div class="modal fade" id="modal-etc" tabindex="-1" role="dialog" aria-labelledby="modal-etc-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-etc-title">プログラミングは自由だ！</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/sec03_03.jpg" class="img-fluid" alt="プログラミングは自由だ！">
+                    <p>
+                        「プログラミング」に関することであれば、題材は何でもＯＫ。
+                    </p>
+                    <p>
+                        マインクラフトのレッドストーン回路で装置プログラミングに挑むニンジャもいれば、Scratchでの作曲やアニメーション作成に没頭するニンジャもいます。
+                    </p>
+                    <p>
+                        携帯ゲーム機の<a href="http://smilebasic.com/" target="_blank">3DSでも本格的なプログラミングができる</a>なんて、ご存知でしたか？
+                    </p>
+                    <p>
+                        最近ではSwitchの「<a href="https://www.nintendo.co.jp/switch/awuxa/" target="_blank">ナビつき！ つくってわかる はじめてゲームプログラミング</a>」が大きな話題になりましたね。
+                    </p>
+                    <p>
+                        中にはグリコのポッキーでプログラミングができる<a href="https://cp.glico.jp/glicode/" target="_blank">GLICODE®（グリコ―ド）</a>なんて変わり種もありますw
+                    </p>
+                    <p>
+                        正解がありそうでないのがプログラミング。自由な環境と自由な発想で、自由なプログラミングを一緒に楽しみましょう。
+                    </p>
+                    <p>
+                        もちろんPythonやC#などの本格的なコーディング言語も大歓迎ですよ！現役職業プログラマーのメンターがサポートします。
+                    </p>
+                    <div class="text-center mb-4">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">とじる</button>
                     </div>
                 </div>
