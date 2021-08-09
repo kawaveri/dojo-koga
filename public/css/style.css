@@ -121,20 +121,20 @@ section p{
 
 /* SEC01 VISION
 ------------------------------------------------------------*/
-#sec01{
+#sec-info{
     background: #f5f5f5;
 }
 
 
 /* SEC02 MESSAGE
 ------------------------------------------------------------*/
-#sec02{
+#sec-message{
     background: #FFFFFF;
 }
 
 /* SEC03 SERVICE
 ------------------------------------------------------------*/
-#sec03{
+#sec-programming{
     background: #f5f5f5;
 }
 
@@ -148,7 +148,7 @@ section p{
 
 /* SEC04 STORY
 ------------------------------------------------------------*/
-#sec04{
+#sec-inquiry{
     padding: 120px 0 120px 0;
     display: flex; /* flexboxを使ってど真ん中に配置 */
     justify-content: center; /* flexboxを使ってど真ん中に配置 */
@@ -156,12 +156,6 @@ section p{
     background: transparent;
     color: white;
     text-align: center;
-}
-
-/* SEC05 PROFILE
-------------------------------------------------------------*/
-#sec05{
-    background: #FFFFFF;
 }
 
 #map{

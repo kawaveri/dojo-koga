@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@800&amp;display=swap" rel="stylesheet">
     <!--Bootstrap CSS -->
+{{--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">--}}
     <link rel="stylesheet" href="css/app.css">
     <!--Font Awesome5-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
@@ -19,9 +20,22 @@
     <link rel="stylesheet" href="css/style.css">
 @if (!(isset($error_page) && $error_page))
     <link rel="canonical" href="@yield('canonical_link', url()->current())">
-    <link rel="shortcut icon" href="@yield('favicon_ico', config('html_head.favicon_ico'))">
-    <link rel="icon" type="image/png" href="@yield('favicon_png', config('html_head.favicon_png'))">
-    <link rel="apple-touch-icon" href="@yield('apple_touch_icon', asset(config('html_head.apple_touch_icon')))">
+{{--    <link rel="shortcut icon" href="@yield('favicon_ico', config('html_head.favicon_ico'))">--}}
+{{--    <link rel="icon" type="image/png" href="@yield('favicon_png', config('html_head.favicon_png'))">--}}
+      <link href='images/apple-icon-57x57.png' rel='apple-touch-icon' sizes='57x57'>
+      <link href='images/apple-icon-60x60.png' rel='apple-touch-icon' sizes='60x60'>
+      <link href='images/apple-icon-72x72.png' rel='apple-touch-icon' sizes='72x72'>
+      <link href='images/apple-icon-76x76.png' rel='apple-touch-icon' sizes='76x76'>
+      <link href='images/apple-icon-114x114.png' rel='apple-touch-icon' sizes='114x114'>
+      <link href='images/apple-icon-120x120.png' rel='apple-touch-icon' sizes='120x120'>
+      <link href='images/apple-icon-144x144.png' rel='apple-touch-icon' sizes='144x144'>
+      <link href='images/apple-icon-152x152.png' rel='apple-touch-icon' sizes='152x152'>
+      <link href='images/apple-icon-180x180.png' rel='apple-touch-icon' sizes='180x180'>
+      <link href='images/android-icon-192x192.png' rel='icon' sizes='192x192' type='image/png'>
+      <link href='images/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
+      <link href='images/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
+      <link href='images/favicon-96x96.png' rel='icon' sizes='96x96' type='image/png'>
+{{--    <link rel="apple-touch-icon" href="@yield('apple_touch_icon', asset(config('html_head.apple_touch_icon')))">--}}
     <meta name="apple-mobile-web-app-title" content="@yield('app_title', config('html_head.app_title'))">
     <meta name="application-name" content="@yield('app_title', config('html_head.app_title'))">
     <meta property="og:title" content="@yield('title', config('html_head.og_title'))">
@@ -54,12 +68,10 @@
                 <!-- nav-item 左寄せ -->
                 <!-- この下の行に mr-auto クラスを付与するだけ -->
                 <ul class="navbar-nav mr-auto">　
-                  <li class="nav-item"><a class="nav-link active text-white js-smooth-scroll" href="#header"><i class="fas fa-home mr-1"></i></i>TOP</a></li>
-                  <li class="nav-item"><a class="nav-link text-white js-smooth-scroll" href="#sec01"><i class="fas fa-braille mr-1"></i>CoderDojo古河とは？</a></li>
-                  <li class="nav-item"><a class="nav-link text-white js-smooth-scroll" href="#sec02"><i class="fas fa-comments mr-1"></i>コミュニティ</a></li>
-                  <li class="nav-item"><a class="nav-link text-white js-smooth-scroll" href="#sec03"><i class="fab fa-servicestack mr-1"></i></i>プログラミング</a></li>
-                  <li class="nav-item"><a class="nav-link text-white js-smooth-scroll" href="#sec04"><i class="fas fa-history mr-1"></i>STORY</a></li>
-                  <li class="nav-item"><a class="nav-link text-white js-smooth-scroll" href="#sec05"><i class="fas fa-user mr-1"></i>PROFILE</a></li>
+                  <li class="nav-item"><a class="nav-link text-white js-smooth-scroll" href="#sec-info"><i class="fas fa-comments mr-1"></i>お知らせ</a></li>
+                  <li class="nav-item"><a class="nav-link text-white js-smooth-scroll" href="#sec-vision"><i class="fas fa-braille mr-1"></i>CoderDojoとは？</a></li>
+                  <li class="nav-item"><a class="nav-link text-white js-smooth-scroll" href="#sec-programming"><i class="fab fa-servicestack mr-1"></i></i>プログラミング</a></li>
+                  <li class="nav-item"><a class="nav-link text-white js-smooth-scroll" href="#sec-inquiry"><i class="fas fa-history mr-1"></i>お問い合せ</a></li>
                 </ul>
                 <!-- nav-item 右寄せ -->
                 <ul class="navbar-nav nav nav-pills">
