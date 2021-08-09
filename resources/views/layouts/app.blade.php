@@ -108,7 +108,7 @@
 
         <!--シェアボタン　各自「AddThis」にアクセスしてご自分のシェアボタンを作成してください。-->
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
-        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d91a99854086150"></script>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61113319775fb0eb"></script>
         <script>
             // iPad だけ.wrapの高さを変更する
             $(function () {
