@@ -8,16 +8,10 @@
       <div class="container">
         <img class="logo" src="images/dojo.svg" alt="CoderDojo古河">
         <h1 class="display-4" data-anijs="if: scroll, on:window, do: bounce animated, before: scrollReveal">
-          <nobr>CoderDojo
-            <wbr>
-            古河
-          </nobr>
+          <nobr>CoderDojo<wbr>古河</nobr>
         </h1>
         <p class="lead" data-anijs="if: scroll, on:window, do: bounce animated, before: scrollReveal">
-          <nobr>子どものための
-            <wbr>
-            プログラミング道場
-          </nobr>
+          <nobr>子どものための<wbr>プログラミング道場</nobr>
         </p>
         <!--<a class="btn btn-secondary btn-lg" href="https://laraweb.net/" target="_blank" role="button" data-anijs="if: scroll, on:window, do: fadeInUp animated, before: scrollReveal">もっと学ぼう</a>-->
       </div>

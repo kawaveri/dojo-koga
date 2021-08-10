@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@800&amp;display=swap" rel="stylesheet">
     <!--Bootstrap CSS -->
-{{--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">--}}
     <link rel="stylesheet" href="css/app.css">
     <!--Font Awesome5-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
@@ -38,18 +37,23 @@
 {{--    <link rel="apple-touch-icon" href="@yield('apple_touch_icon', asset(config('html_head.apple_touch_icon')))">--}}
     <meta name="apple-mobile-web-app-title" content="@yield('app_title', config('html_head.app_title'))">
     <meta name="application-name" content="@yield('app_title', config('html_head.app_title'))">
-    <meta property="og:title" content="@yield('title', config('html_head.og_title'))">
-    <meta property="og:type" content="@yield('og_type', config('html_head.og_type'))">
-    <meta property="og:url" content="@yield('og_url', url()->current())">
-    <meta property="og:image" content="@yield('og_image', asset(config('html_head.og_image')))">
-    <meta property="og:site_name" content="@yield('og_site_name', config('html_head.og_site_name'))">
-    <meta property="og:description" content="@yield('description', config('html_head.description'))">
-    <meta name="twitter:card" content="@yield('twitter_card', config('html_head.twitter_card'))">
-    <meta name="twitter:site" content="@yield('twitter_site', config('html_head.twitter_site'))">
-    <meta name="twitter:title" content="@yield('title', config('html_head.og_title'))">
-    <meta name="twitter:description" content="@yield('description', config('html_head.description'))">
-    <meta name="twitter:image" content="@yield('og_image', asset(config('html_head.og_image')))">
-@endif
+
+      <meta content='CoderDojo古河 - 子どものためのプログラミング道場' property='og:title'>
+      <meta content='https://coderdojo-koga.hyasynth.com/' property='og:url'>
+      <meta content='CoderDojoとは、世界中で開かれている子どもたち向けの非営利のプログラミングクラブです。古河道場は茨城県古河市を中心に開催しております。' name='description'>
+      <meta content='CoderDojoとは、世界中で開かれている子どもたち向けの非営利のプログラミングクラブです。古河道場は茨城県古河市を中心に開催しております。' property='og:description'>
+      <meta content='website' property='og:type'>
+      <meta content='https://coderdojo-koga.hyasynth.com/images/dojo_ogp.png' property='og:image'>
+      <meta content='image/png' property='og:image:type'>
+      <meta content='CoderDojo古河' property='og:site_name'>
+      <meta content='summary_large_image' name='twitter:card'>
+      <meta content='@Kawaveri' name='twitter:site'>
+      <meta content='@Kawaveri' name='twitter:creator'>
+      <meta content='CoderDojo古河 - 子どものためのプログラミング道場' name='twitter:title'>
+      <meta content='CoderDojoとは、世界中で開かれている子どもたち向けの非営利のプログラミングクラブです。古河道場は茨城県古河市を中心に開催しております。' name='twitter:description'>
+      <meta content='https://coderdojo-koga.hyasynth.com/images/dojo_ogp.png' name='twitter:image'>
+      <meta content='https://coderdojo-koga.hyasynth.com/' name='twitter:url'>
+    @endif
 @stack('head-scripts')
   </head>
   <body class="html-body @yield('extra-body-class')">
