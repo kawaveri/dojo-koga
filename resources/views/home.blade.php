@@ -26,17 +26,15 @@
         <div class="row mb-5">
           <div class="col-md-6 col-sm-12">
             <h2>お知らせ</h2>
-            <ul class="link-list columns is-multiline mx-0">
+            <ul class="link-list">
               @forelse($infos as $info)
-                <li class="link-list__item column is-full">
-                  {{--                  <a class="link-list__link" href="{{ route('info.show', ['info'=>$info->id]) }}">--}}
-                  <a class="link-list__link" href="#">
-                    <p class="has-text-weight-semibold">{{ $info->title }}</p>
-                    <p class="is-size-7 mt-1">{{ optional($info->open_at)->format('Y.n.j') }}</p>
+                <li>
+                  <a href="{{ route('info.show', ['info'=>$info->id]) }}">
+                    {{ optional($info->open_at)->format('［Y.n.j］') }}{{ $info->title }}
                   </a>
                 </li>
               @empty
-                <li class="link-list__item column is-full">
+                <li>
                   現在最新のお知らせはありません。
                 </li>
               @endforelse

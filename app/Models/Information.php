@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Information extends Model
 {
     use HasFactory;
+
+    protected $guarded = ['id'];
+
+    protected $dates = [
+        'open_at',
+        'close_at',
+    ];
 }
+

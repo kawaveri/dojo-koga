@@ -11,12 +11,12 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@800&amp;display=swap" rel="stylesheet">
     <!--Bootstrap CSS -->
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
     <!--Font Awesome5-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <!-- AniCollection.css library -->
     <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 @if (!(isset($error_page) && $error_page))
     <link rel="canonical" href="@yield('canonical_link', url()->current())">
 {{--    <link rel="shortcut icon" href="@yield('favicon_ico', config('html_head.favicon_ico'))">--}}
@@ -64,7 +64,7 @@
           <header class="sticky-top">
             <nav class="navbar navbar-expand-md navbar-light bg-primary">
               <!-- ロゴ -->
-              <a class="navbar-brand text-white" href="#">CoderDojo古河</a>
+              <a class="navbar-brand text-white" href="{{ route('home') }}">CoderDojo古河</a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="ナビゲーションの切替">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -72,7 +72,7 @@
                 <!-- nav-item 左寄せ -->
                 <!-- この下の行に mr-auto クラスを付与するだけ -->
                 <ul class="navbar-nav mr-auto">　
-                  <li class="nav-item"><a class="nav-link text-white js-smooth-scroll" href="#sec-info"><i class="fas fa-comments mr-1"></i>お知らせ</a></li>
+                  <li class="nav-item"><a class="nav-link text-white js-smooth-scroll" href="{{ route('info.index') }}"><i class="fas fa-comments mr-1"></i>お知らせ</a></li>
                   <li class="nav-item"><a class="nav-link text-white js-smooth-scroll" href="#sec-vision"><i class="fas fa-braille mr-1"></i>CoderDojoとは？</a></li>
                   <li class="nav-item"><a class="nav-link text-white js-smooth-scroll" href="#sec-programming"><i class="fab fa-servicestack mr-1"></i></i>プログラミング</a></li>
                   <li class="nav-item"><a class="nav-link text-white js-smooth-scroll" href="#sec-inquiry"><i class="fas fa-history mr-1"></i>お問い合せ</a></li>
@@ -106,9 +106,9 @@
         <!-- ScrollReveal Helper-->
         <script src="https://anijs.github.io/lib/anijs/helpers/scrollreveal/anijs-helper-scrollreveal-min.js"></script>
         <!-- Parallax library -->
-        <script src="js/parallax.min.js"></script>
+        <script src="{{ asset('/js/parallax.min.js') }}"></script>
         <!-- スムーズスクロール部分の記述 -->
-        <script src="js/smoothscroll.js"></script>
+        <script src="{{ asset('/js/smoothscroll.js') }}"></script>
 
         <!--シェアボタン　各自「AddThis」にアクセスしてご自分のシェアボタンを作成してください。-->
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
