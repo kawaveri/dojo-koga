@@ -8,8 +8,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $informations = Information::orderBy('id', 'desc')->limit(5);
+        $infos = Information::orderBy('open_at', 'desc')->limit(5)->get();
 
-        return view('home', compact('informations'));
+        return view('home', compact('infos'));
     }
 }

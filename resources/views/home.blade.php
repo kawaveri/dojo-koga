@@ -13,7 +13,6 @@
         <p class="lead" data-anijs="if: scroll, on:window, do: bounce animated, before: scrollReveal">
           <nobr>子どものための<wbr>プログラミング道場</nobr>
         </p>
-        <!--<a class="btn btn-secondary btn-lg" href="https://laraweb.net/" target="_blank" role="button" data-anijs="if: scroll, on:window, do: fadeInUp animated, before: scrollReveal">もっと学ぼう</a>-->
       </div>
     </div>
   </div>
@@ -27,9 +26,21 @@
         <div class="row mb-5">
           <div class="col-md-6 col-sm-12">
             <h2>お知らせ</h2>
-            <p>
-              現在最新のお知らせはありません。
-            </p>
+            <ul class="link-list columns is-multiline mx-0">
+              @forelse($infos as $info)
+                <li class="link-list__item column is-full">
+                  {{--                  <a class="link-list__link" href="{{ route('info.show', ['info'=>$info->id]) }}">--}}
+                  <a class="link-list__link" href="#">
+                    <p class="has-text-weight-semibold">{{ $info->title }}</p>
+                    <p class="is-size-7 mt-1">{{ optional($info->open_at)->format('Y.n.j') }}</p>
+                  </a>
+                </li>
+              @empty
+                <li class="link-list__item column is-full">
+                  現在最新のお知らせはありません。
+                </li>
+              @endforelse
+            </ul>
           </div>
           <div class="col-md-6 col-sm-12 text-center p-5">
             <div class="fb-page" data-href="https://www.facebook.com/coderdojokoga/" data-tabs="timeline"
