@@ -2,7 +2,7 @@
 
 @section('title', 'ホーム')
 
-@section('jumbotron')
+@section('welcome')
   <div class="home_header">
     <div class="home_overlay">
       <div class="container">
@@ -187,6 +187,12 @@
     </section>
     <!-- // STORY -->
   </main>
+@endsection
+
+@section('extra-navi')
+  <li class="nav-item"><a class="nav-link text-white js-smooth-scroll" href="#sec-vision"><i class="fas fa-braille mr-1"></i>CoderDojoとは？</a></li>
+  <li class="nav-item"><a class="nav-link text-white js-smooth-scroll" href="#sec-programming"><i class="fab fa-servicestack mr-1"></i>プログラミング</a></li>
+  <li class="nav-item"><a class="nav-link text-white js-smooth-scroll" href="#sec-inquiry"><i class="fas fa-envelope mr-1"></i>お問い合せ</a></li>
 @endsection
 
 @section('extra-content')
