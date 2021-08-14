@@ -15,7 +15,7 @@
       </section>
     </main>
     <nav class="section has-text-centered">
-      <a class="button is-primary is-rounded is-wide" href="{{ route('info.index') }}">前のページに戻る</a>
+      <a class="button is-primary is-rounded is-wide" href="{{ route('info.index') }}">お知らせ一覧に戻る</a>
       <hr>
     </nav>
   </div>

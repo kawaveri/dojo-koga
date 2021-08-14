@@ -13,10 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Auth::routes();
-
 Route::get('/', 'HomeController@index')->name('home');
 
-// お知らせ
-Route::get('/info', 'InfoController@index')->name('info.index');
-Route::get('/info/{info}', 'InfoController@show')->name('info.show');
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', 'Auth\LoginController@login');
+
+Route::middleware('auth')->group(function () {
+    // お知らせ(編集)
+    Route::resource('info', InfoController::class)->except(['index', 'show']);
+    Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+});
+// お知らせ(閲覧)
+Route::resource('info', InfoController::class)->only(['index', 'show']);
