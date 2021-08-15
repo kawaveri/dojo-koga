@@ -19,22 +19,10 @@
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
     @if (!(isset($error_page) && $error_page))
         <link rel="canonical" href="@yield('canonical_link', url()->current())">
-        {{--    <link rel="shortcut icon" href="@yield('favicon_ico', config('html_head.favicon_ico'))">--}}
-        {{--    <link rel="icon" type="image/png" href="@yield('favicon_png', config('html_head.favicon_png'))">--}}
-        <link href='images/apple-icon-57x57.png' rel='apple-touch-icon' sizes='57x57'>
-        <link href='images/apple-icon-60x60.png' rel='apple-touch-icon' sizes='60x60'>
-        <link href='images/apple-icon-72x72.png' rel='apple-touch-icon' sizes='72x72'>
-        <link href='images/apple-icon-76x76.png' rel='apple-touch-icon' sizes='76x76'>
-        <link href='images/apple-icon-114x114.png' rel='apple-touch-icon' sizes='114x114'>
-        <link href='images/apple-icon-120x120.png' rel='apple-touch-icon' sizes='120x120'>
-        <link href='images/apple-icon-144x144.png' rel='apple-touch-icon' sizes='144x144'>
-        <link href='images/apple-icon-152x152.png' rel='apple-touch-icon' sizes='152x152'>
-        <link href='images/apple-icon-180x180.png' rel='apple-touch-icon' sizes='180x180'>
-        <link href='images/android-icon-192x192.png' rel='icon' sizes='192x192' type='image/png'>
-        <link href='images/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
-        <link href='images/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
-        <link href='images/favicon-96x96.png' rel='icon' sizes='96x96' type='image/png'>
-        {{--    <link rel="apple-touch-icon" href="@yield('apple_touch_icon', asset(config('html_head.apple_touch_icon')))">--}}
+        <link rel="icon" href="/favicon.ico"><!-- 32×32 -->
+        <link rel="icon" href="/icon.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
+        <link rel="manifest" href="/manifest.webmanifest">
         <meta name="apple-mobile-web-app-title" content="@yield('app_title', config('html_head.app_title'))">
         <meta name="application-name" content="@yield('app_title', config('html_head.app_title'))">
 
