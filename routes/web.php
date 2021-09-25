@@ -25,3 +25,5 @@ Route::middleware('auth')->group(function () {
 });
 // お知らせ(閲覧)
 Route::resource('info', InfoController::class)->only(['index', 'show']);
+// CoderDojoとは？
+Route::get('whats', 'WhatsController@index')->name('whats.index');
