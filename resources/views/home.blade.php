@@ -8,10 +8,16 @@
       <div class="container">
         <img class="logo" src="images/dojo.svg" alt="CoderDojo古河">
         <h1 class="display-4" data-anijs="if: scroll, on:window, do: bounce animated, before: scrollReveal">
-          <nobr>CoderDojo<wbr>古河</nobr>
+          <nobr>CoderDojo
+            <wbr>
+            古河
+          </nobr>
         </h1>
         <p class="lead" data-anijs="if: scroll, on:window, do: bounce animated, before: scrollReveal">
-          <nobr>子どものための<wbr>プログラミング道場</nobr>
+          <nobr>子どものための
+            <wbr>
+            プログラミング道場
+          </nobr>
         </p>
       </div>
     </div>
@@ -58,21 +64,24 @@
             nonce="yCm8Bl7W"></script>
     <!-- // INFO -->
 
-      <!-- VISION -->
-      <section id="sec-vision">
-          <div class="container text-center">
-              <h2 class="mt-3" data-anijs="if: scroll, on:window, do: flipInX animated, before: scrollReveal">
-                  CoderDojoとは？</h2>
-              <p data-anijs="if: scroll, on:window, do: flipInY animated, before: scrollReveal">
-                  世界中で開かれている、子どもたち向けのプログラミングクラブです。<br>
-                  プログラミングを通じて、ものづくりの楽しさを手軽に楽しんでほしい。<br>
-                  そんなおとなたちがボランティアで開催している、非営利のコミュニティです。
-              </p>
-          </div><!-- /.container -->
-      </section>
-      <!-- // VISION -->
+    <!-- VISION -->
+    <section id="sec-vision">
+      <div class="container text-center">
+        <h2 class="mt-3" data-anijs="if: scroll, on:window, do: flipInX animated, before: scrollReveal">
+          CoderDojoとは？</h2>
+        <p data-anijs="if: scroll, on:window, do: flipInY animated, before: scrollReveal">
+          世界中で開かれている、子どもたち向けのプログラミングクラブです。<br>
+          プログラミングを通じて、ものづくりの楽しさを手軽に楽しんでほしい。<br>
+          そんなおとなたちがボランティアで開催している、非営利のコミュニティです。<br>
+        </p>
+        <p>
+          <a href="{{ route('whats.index') }}">詳しくはこちら ></a>
+        </p>
+      </div><!-- /.container -->
+    </section>
+    <!-- // VISION -->
 
-      <!-- MESSAGE -->
+    <!-- MESSAGE -->
     <section id="sec-message">
       <div class="container">
         <div class="row mb-5">
@@ -177,12 +186,15 @@
     <section class="mb-5" id="sec-inquiry" data-parallax="scroll" data-image-src="images/form_bg.jpg">
       <div class="container" data-anijs="if: scroll, on:window, do: fadeIn animated, before: scrollReveal">
         <h2 class="text-white">お申し込み・お問い合わせ</h2>
-          <p>
-              イベントへのお申し込み、およびCoderDojo古河へのお問い合わせは<a class="active" target="_blank" href="https://coderdojokoga.connpass.com/">connpass</a>からお願いいたします。
-          </p>
-          <p>
-              <a class="active" target="_blank" href="https://coderdojokoga.connpass.com/"><img class="w-50" src="images/connpass_logo_2.png" alt="connpass"></a>
-          </p>
+        <p>
+          イベントへのお申し込み、およびCoderDojo古河へのお問い合わせは<a class="active" target="_blank"
+                                                href="https://coderdojokoga.connpass.com/">connpass</a>からお願いいたします。
+        </p>
+        <p>
+          <a class="active" target="_blank" href="https://coderdojokoga.connpass.com/"><img class="w-50"
+                                                                                            src="images/connpass_logo_2.png"
+                                                                                            alt="connpass"></a>
+        </p>
       </div><!-- /.container -->
     </section>
     <!-- // STORY -->
@@ -190,9 +202,10 @@
 @endsection
 
 @section('extra-navi')
-  <li class="nav-item"><a class="nav-link text-white js-smooth-scroll" href="#sec-vision"><i class="fas fa-braille mr-1"></i>CoderDojoとは？</a></li>
-  <li class="nav-item"><a class="nav-link text-white js-smooth-scroll" href="#sec-programming"><i class="fab fa-servicestack mr-1"></i>プログラミング</a></li>
-  <li class="nav-item"><a class="nav-link text-white js-smooth-scroll" href="#sec-inquiry"><i class="fas fa-envelope mr-1"></i>お問い合せ</a></li>
+  <li class="nav-item"><a class="nav-link text-white js-smooth-scroll" href="#sec-programming"><i
+              class="fas fa-laptop-code mr-1"></i>プログラミング</a></li>
+  <li class="nav-item"><a class="nav-link text-white js-smooth-scroll" href="#sec-inquiry"><i
+              class="fas fa-envelope mr-1"></i>お問い合せ</a></li>
 @endsection
 
 @section('extra-content')
