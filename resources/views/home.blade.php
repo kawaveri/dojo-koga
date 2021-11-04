@@ -87,7 +87,7 @@
         <div class="row mb-5">
           <div class="col-md-6 col-sm-12"
                data-anijs="if: scroll, on:window, do: fadeInLeft animated, before: scrollReveal">
-            <img class="img-fluid" src="images/sec02_01.jpg">
+            <img class="img-fluid" src="{{ asset('/images/sec02_01.jpg') }}">
           </div>
           <div class="col-md-6 col-sm-12 p-5"
                data-anijs="if: scroll, on:window, do: fadeInRight animated, before: scrollReveal">
@@ -106,7 +106,7 @@
         <div class="row flex-row-reverse">
           <div class="col-md-6 col-sm-12"
                data-anijs="if: scroll, on:window, do: fadeInRight animated, before: scrollReveal">
-            <img class="img-fluid" src="images/sec02_02.jpg">
+            <img class="img-fluid" src="{{ asset('/images/sec02_02.jpg') }}">
           </div>
           <div class="col-md-6 col-sm-12 p-5"
                data-anijs="if: scroll, on:window, do: fadeInLeft animated, before: scrollReveal">
@@ -128,7 +128,7 @@
         <div class="row">
           <div class="col-md-4 col-sm-12">
             <div class="card mb-4">
-              <img class="card-img-top" src="images/sec03_01.jpg" alt="Card image cap">
+              <img class="card-img-top" src="{{ asset('/images/sec03_01.jpg') }}" alt="Card image cap">
               <div class="card-body">
                 <h4 class="card-title">Scratchではじめよう</h4>
                 <p class="card-text">
@@ -145,7 +145,7 @@
           </div>
           <div class="col-md-4 col-sm-12">
             <div class="card mb-4">
-              <img class="card-img-top" src="images/sec03_02.jpg" alt="Card image cap">
+              <img class="card-img-top" src="{{ asset('/images/sec03_02.jpg') }}" alt="Card image cap">
               <div class="card-body">
                 <h4 class="card-title">さわって遊ぼう</h4>
                 <p class="card-text">
@@ -162,7 +162,7 @@
           </div>
           <div class="col-md-4 col-sm-12">
             <div class="card mb-4">
-              <img class="card-img-top" src="images/sec03_03.jpg" alt="Card image cap">
+              <img class="card-img-top" src="{{ asset('/images/sec03_03.jpg') }}" alt="Card image cap">
               <div class="card-body">
                 <h4 class="card-title">プログラミングは自由だ！</h4>
                 <p class="card-text">
@@ -183,7 +183,7 @@
     <!-- // MESSAGE -->
 
     <!-- STORY -->
-    <section class="mb-5" id="sec-inquiry" data-parallax="scroll" data-image-src="images/form_bg.jpg">
+    <section class="mb-5" id="sec-inquiry" data-parallax="scroll" data-image-src="{{ asset('/images/form_bg.jpg') }}">
       <div class="container" data-anijs="if: scroll, on:window, do: fadeIn animated, before: scrollReveal">
         <h2 class="text-white">お申し込み・お問い合わせ</h2>
         <p>
@@ -192,7 +192,7 @@
         </p>
         <p>
           <a class="active" target="_blank" href="https://coderdojokoga.connpass.com/"><img class="w-50"
-                                                                                            src="images/connpass_logo_2.png"
+                                                                                            src="{{ asset('/images/connpass_logo_2.png') }}"
                                                                                             alt="connpass"></a>
         </p>
       </div><!-- /.container -->
@@ -222,7 +222,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <img src="images/sec03_01.jpg" class="img-fluid" alt="Scratch">
+          <img src="{{ asset('/images/sec03_01.jpg') }}" class="img-fluid" alt="Scratch">
           <p>
             はじめてプログラミングに触れるお子さまは、まずScratchを使ってみると良いでしょう。<br>
             ブロック遊びのように部品を組み立てるだけで、簡単に始めることができます。
@@ -259,7 +259,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <img src="images/sec03_02.jpg" class="img-fluid" alt="robot">
+          <img src="{{ asset('/images/sec03_02.jpg') }}" class="img-fluid" alt="robot">
           <p>
             古河道場の特色として、Micro:bitやmBotなどのハードウェアを用いた体験型プログラミングに注力しています。
           </p>
@@ -300,7 +300,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <img src="images/sec03_03.jpg" class="img-fluid" alt="プログラミングは自由だ！">
+          <img src="{{ asset('/images/sec03_03.jpg') }}" class="img-fluid" alt="プログラミングは自由だ！">
           <p>
             「プログラミング」に関することであれば、題材は何でもＯＫ。
           </p>
